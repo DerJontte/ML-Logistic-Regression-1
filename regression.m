@@ -11,14 +11,15 @@ function regression(training_size = 50)
   #  - X holds the independent variables casewise
   #  - y holds the dependent variables casewise
   #  - theta holds the regression coefficients
-#  X = [ones(length(age), 1) [age distance mobility gender]]; -> 73,33%
-#  X = [ones(length(age), 1) [distance mobility gender]]; -> 72,67%
-#  X = [ones(length(age), 1) [age mobility gender]]; -> 69,33%
-#  X = [ones(length(age), 1) [age distance gender]]; -> 68,44%
+
+  #  X = [ones(length(age), 1) [age distance mobility gender]]; -> 73,33%
+  #  X = [ones(length(age), 1) [distance mobility gender]]; -> 72,67%
+  #  X = [ones(length(age), 1) [age mobility gender]]; -> 69,33%
+  #  X = [ones(length(age), 1) [age distance gender]]; -> 68,44%
   X = [ones(length(age), 1) [age distance mobility]]; # -> 77,56%
-#  X = [ones(length(age), 1) [age distance]]; -> 71,11%
-#  X = [ones(length(age), 1) [age mobility ]]; -> 69,56%
-#  X = [ones(length(age), 1) [distance mobility ]]; -> 75,33%
+  # X = [ones(length(age), 1) [age distance]]; -> 71,11%
+  # X = [ones(length(age), 1) [age mobility ]]; -> 69,56%
+  # X = [ones(length(age), 1) [distance mobility ]]; -> 75,33%
   Y = part;
   theta = zeros(1, size(X, 2));
 
